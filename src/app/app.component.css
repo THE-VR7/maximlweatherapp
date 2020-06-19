@@ -1,3 +1,17 @@
-p {
+.panel {
   font-family: Lato;
+  border: 1px solid black;
+  width: 300px;
+  height: 300px;
+  /* display: inline-flex; */
+  margin: 20px;
+}
+.container{
+  margin: 20px;
+}
+.row{
+  border: 3px solid blue;
+}
+.col{
+  border: 5px solid green;
 }
