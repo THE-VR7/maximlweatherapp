@@ -6,5 +6,9 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
+  public showedit=false
+  displayedit()
+  {
+    this.showedit=true;
+  }
 }
