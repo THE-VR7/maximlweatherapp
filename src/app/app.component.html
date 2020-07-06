@@ -10,15 +10,15 @@
                         Click Me
                     </span>
                 </div>
-                <form [formGroup]="(checkcity.at(itemindex))" (ngSubmit)="showresults(itemindex,item.cityname)" >
+                <form [formGroup]="$any(checkcity.at(itemindex))" (ngSubmit)="showresults(itemindex,item.cityname)" >
                     <div *ngIf="item.showsearch" class="editbox    my-2 mx-2">
                         <input type="text" class="form-control mx-2 my-2 d-inline-flex" name="inputcity"
                             formControlName="inputcity"
-                            [ngClass]="{'is-invalid': !checkcity.at(itemindex).controls.inputcity.valid && checkcity.at(itemindex).controls.inputcity.dirty , 'is-valid': checkcity.at(itemindex).controls.inputcity.valid && checkcity.at(itemindex).controls.inputcity.dirty }"
+                            [ngClass]="{'is-invalid': !$any(checkcity.at(itemindex)).controls.inputcity.valid && $any(checkcity.at(itemindex)).controls.inputcity.dirty , 'is-valid': $any(checkcity.at(itemindex)).controls.inputcity.valid && $any(checkcity.at(itemindex)).controls.inputcity.dirty }"
                             placeholder="Click to Enter City">
-                            <button type="submit" [disabled]="checkcity.at(itemindex).invalid && checkcity.at(itemindex).touched" class="btn-1 btn-primary d-inline-flex">Save</button>
+                            <button type="submit" [disabled]="$any(checkcity.at(itemindex)).invalid && $any(checkcity.at(itemindex)).touched" class="btn-1 btn-primary d-inline-flex">Save</button>
 
-                        <div *ngIf="checkcity.at(itemindex).controls.inputcity.hasError('cityinvalid') && checkcity.at(itemindex).controls.inputcity.touched"
+                        <div *ngIf="$any(checkcity.at(itemindex)).controls.inputcity.hasError('cityinvalid') && $any(checkcity.at(itemindex)).controls.inputcity.touched"
                             class="mr-5 text-danger">
                             Invalid City Name
                         </div>        
